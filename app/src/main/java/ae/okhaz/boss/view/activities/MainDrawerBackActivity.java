@@ -890,9 +890,7 @@ public class MainDrawerBackActivity extends AppCompatActivity {
 
     public void goTOLogin(){
         Intent intent =new Intent(MainDrawerBackActivity.this, LoginActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-        finish();
     }
 
     public void Showsnacks(String msg)
