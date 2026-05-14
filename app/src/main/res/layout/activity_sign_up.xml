@@ -61,7 +61,7 @@
                 <RelativeLayout
                     android:id="@+id/relative_upper"
                     android:layout_width="match_parent"
-                    android:layout_height="620dp"
+                    android:layout_height="640dp"
                     android:background="@drawable/login_bg_top">
 
                     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -555,7 +555,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="235dp"
                     android:visibility="visible"
-                    android:layout_marginTop="480dp"
+                    android:layout_marginTop="500dp"
                     android:rotation="0.9"
                     android:background="@drawable/login_bg_bottom">
 

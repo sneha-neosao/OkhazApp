@@ -110,6 +110,7 @@ public class LoginActivity extends AppCompatActivity implements NetworkChangeRec
             @Override
             public void onClick(View view) {
                 //startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+                startActivity(new Intent(LoginActivity.this, MainDrawerBackActivity.class));
                 finish();
             }
         });

@@ -114,6 +114,7 @@ public class SignUpActivity extends AppCompatActivity {
         iv_back_sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
                 finish();
             }
         });
