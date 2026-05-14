@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ae.okhaz.boss.Activitys.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Delievrys.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:navigationIcon="@drawable/ic_menu"
+            app:popupTheme="@style/Theme.Delievrys.PopupOverlay" />
+
+
+
+            <TextView
+                android:id="@+id/txt_mainOrder_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="148dp"
+                android:paddingBottom="18dp"
+                android:text="12345678"
+                android:textColor="@color/highlight"
+                />
+
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <include layout="@layout/content_supplier" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

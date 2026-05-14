@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ae.okhaz.boss.ui.gallery.GalleryFragment">
+    <ScrollView
+
+        android:id="@+id/profile_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--        <androidx.cardview.widget.CardView-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:layout_margin="@dimen/margin10"-->
+            <!--            app:cardCornerRadius="@dimen/margin10">-->
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:orientation="vertical">-->
+
+            <LinearLayout
+                android:background="@color/orange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/profiles_img"
+                        app:civ_border_width="1dp"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:paddingStart="20sp"
+                    android:text="John Sane"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:id="@+id/user_name_txt"
+                    android:paddingLeft="20sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+
+                android:drawableStart="@drawable/call"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="0987654321"
+                android:id="@+id/user_contact_txt"
+                android:drawableLeft="@drawable/call"
+                style="@style/Profiles"/>
+
+            <TextView
+                android:drawableStart="@drawable/email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="testing@gmail.com"
+                android:id="@+id/user_email_txt"
+                android:drawableLeft="@drawable/call"
+                style="@style/Profiles"/>
+
+            <TextView
+                android:drawableStart="@drawable/person"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="USER_20_1"
+                android:id="@+id/user_id_txt"
+                android:drawableLeft="@drawable/call"
+                style="@style/Profiles"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/profile_progressbar"/>
+
+
+
+</RelativeLayout>

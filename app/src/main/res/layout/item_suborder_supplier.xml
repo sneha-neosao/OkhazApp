@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_suborder_status"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="4dp"
+                    android:src="@drawable/processing"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_subOrder_no"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:background="?attr/selectableItemBackground"
+                        android:text="Suborder #12345689"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_suborder_total"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/hintColor"
+                        android:textSize="10sp"
+                        android:background="?attr/selectableItemBackground"
+                        android:text="Total : AED 123"
+                        />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/txt_subOrder_status"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_gravity="top|end"
+                    android:text="Accepted"
+                    android:gravity="center"
+                    android:backgroundTint="@color/colorprimary"
+                    android:background="@drawable/topleft_and_botomright_rounde_orange_background"
+                    />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+      <!--  <include layout="@layout/item_layout_product"/>
+        <include layout="@layout/item_layout_product"/>
+        <include layout="@layout/item_supplier_info"/>-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_items"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:nestedScrollingEnabled="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Supplier notes-->
+        <LinearLayout
+            android:id="@+id/llSupplierNotes"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSupplierNotes"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Enter your comment">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSupplierNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tvSupplierNotes"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/topleft_and_botomright_rounde_green_background"
+                android:visibility="visible"
+                android:layout_width="114dp"
+                android:layout_height="22dp"
+                android:text="Supplier Notes"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_gravity="bottom|end"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <include layout="@layout/item_supplier_info"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/dash_bg" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_subOrder_status1"
+        android:layout_width="120dp"
+        android:visibility="gone"
+        android:layout_height="30dp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_gravity="top|end"
+        android:text="Pending"
+        android:gravity="center"
+        android:background="@drawable/topright_botomleft_rounde_green_background"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/green"
+                android:orientation="horizontal"
+                android:layout_marginStart="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_back_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textSize="24sp"
+                    />
+
+                <RelativeLayout
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:backgroundTint="@color/red"
+                        android:src="@drawable/shape_circle_red"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_noti_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="3"
+                        android:layout_centerInParent="true"
+                        />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="View all"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_gravity="center"
+                    android:gravity="end"
+                    android:textSize="10sp"
+                    />
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/left_rounded"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rv_notification"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+                        />
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:background="@color/white"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="16dp"
+                    android:background="@drawable/left_rounded_light_red"
+                    android:layout_marginTop="30dp"
+                    >
+                    <include layout="@layout/item_layout_notification_1" />
+                    <include layout="@layout/item_layout_notification_1"/>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        app:tint="@color/black"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/ivNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bell"
+        app:tint="@color/black"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="30dp"
+        />
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <FrameLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="96dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <LinearLayout android:orientation="vertical"
+            android:id="@+id/player_control"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/item_map_order_layout"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

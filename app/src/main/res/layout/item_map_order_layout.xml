@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/shape_rounded_corner">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:cardCornerRadius="12dp"
+                android:backgroundTint="@color/green"
+               android:layout_margin="20dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/homes"
+                            android:layout_marginEnd="5dp"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/start_tvs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:background="@drawable/shape_rounded_corner"
+                            android:backgroundTint="#C840E9"
+                            android:text="Self"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        app:tint="@color/white"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/flag"
+                            app:tint="@color/white"
+                            android:layout_marginEnd="5dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/end_tvs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:backgroundTint="@color/main_blue_color"
+                            android:background="@drawable/shape_rounded_corner"
+                            android:text="Order #249"
+                            android:textSize="10sp"
+                            android:gravity="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/total_stops"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:text="4 Stops"
+                        android:textSize="14sp"
+                        android:gravity="end"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textColor="@color/white"
+                       />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/green_1"
+                   >
+                </androidx.cardview.widget.CardView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="4dp"
+                android:background="@drawable/dash_bg"
+                android:layout_gravity="center"
+              />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/green_1"
+                    >
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_faq_bottom"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_layout_faq_bottom"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:id="@+id/llFaqList">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/locations_recycler"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:visibility="gone"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/list_recycler"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/optimize_cv"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="20sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="25dp"
+                    app:cardBackgroundColor="#4F65DF"
+                    android:layout_alignParentRight="true">
+                    <TextView
+                        android:id="@+id/optimize_txt"
+                        android:paddingStart="10sp"
+                        android:paddingEnd="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textSize="13sp"
+                        android:text="  Optimize route  "
+                        android:drawableStart="@drawable/sync"
+                        android:drawableLeft="@drawable/sync"/>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- <include layout="@layout/item_map_order"/>
+
+                 <include layout="@layout/item_map_order"/>
+
+                 <include layout="@layout/item_map_order"/>
+
+                 <include layout="@layout/item_map_order"/>-->
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/bottom_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

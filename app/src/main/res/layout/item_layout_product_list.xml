@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_subOrder_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/barcode"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="Suborder"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/img_subOrder_downArrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                />
+
+            <ImageView
+                android:id="@+id/img_subOrder_upArrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:visibility="gone"
+                android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_subOrder_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_subOrder_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:fontFamily="@font/open_sans"
+                android:text="Name : abcd"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:id="@+id/txt_subOrder_Tele"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:visibility="visible"
+                android:fontFamily="@font/open_sans"
+                android:text="Supplier Tele"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:id="@+id/txt_subOrder_bankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:fontFamily="@font/open_sans"
+                android:text="Bank Name : XYZ"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:id="@+id/txt_subOrder_accNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:fontFamily="@font/open_sans"
+                android:text="Account Number :123456789"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:id="@+id/txt_subOrder_accBranch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:fontFamily="@font/open_sans"
+                android:text="account branch : xyz"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:id="@+id/txt_subOrder_ifsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:fontFamily="@font/open_sans"
+                android:text="ifsc code :IFSC0123"
+                android:layout_marginLeft="5dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_subOrder_bankAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="12sp"
+                android:fontFamily="@font/open_sans"
+                android:text="Bank Address:abcdef,hhjhu,koasj"
+                android:layout_marginLeft="5dp"
+                />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/navigation_cv"
+                android:layout_height="35dp"
+                android:layout_width="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_map"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/nears"
+                        app:tint="@color/colorprimary" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/dash_bg"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_items"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:nestedScrollingEnabled="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

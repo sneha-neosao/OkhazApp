@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ae.okhaz.boss.Fragments.Admin.OrderFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbars">
+
+        <com.google.android.material.tabs.TabLayout
+            app:tabMode="scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SHowText"
+            android:id="@+id/tab_layout"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_tab_pager"
+        android:background="@color/white"
+        android:layout_below="@id/appbars"/>
+
+</RelativeLayout>

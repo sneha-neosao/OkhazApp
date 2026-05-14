@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attrs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    >
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/activity_main_view_pager"
+        android:background="@drawable/bg_light_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/pager_dots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content">
+
+        <!--<com.rd.PageIndicatorView
+            android:id="@+id/tutorial_activity_page_indicator_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            attrs:piv_animationType="drop"
+            attrs:piv_dynamicCount="true"
+            android:layout_gravity="center"
+            attrs:piv_interactiveAnimation="true"
+            attrs:piv_padding="16dp"
+            attrs:piv_radius="8dp"
+            attrs:piv_selectedColor="@color/colorAccent"
+            attrs:piv_unselectedColor="@color/colorPrimaryDark"
+            attrs:piv_viewPager="@id/activity_main_view_pager" />-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="next"
+            android:visibility="visible"
+            android:layout_gravity="right"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/colorprimary"
+            android:layout_marginBottom="60dp"
+            attrs:cornerRadius="20dp"
+            android:layout_marginRight="-20dp"
+            android:textColor="@color/white"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+            android:layout_alignParentRight="true"
+
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

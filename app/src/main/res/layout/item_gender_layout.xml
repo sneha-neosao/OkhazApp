@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/llStatusBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        style="@style/SheetDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:layout_width="50dp"
+            android:layout_height="4dp"
+            android:background="@drawable/shape_bg_darkbutton"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Gender"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center"
+            android:background="@drawable/bottom_sheet_background" />
+
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="30dp">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/rbActive"
+                android:text="Male"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"/>
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:id="@+id/rbInactive"
+                android:text="Female"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"/>
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/light_bg_gray">
+
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_deliveryBoy"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical"
+            tools:listitem="@layout/item_layout_delivery_boy_2"
+            android:nestedScrollingEnabled="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+     <!--   <include layout="@layout/item_layout_delivery_boy_2"/>
+        <include layout="@layout/item_layout_delivery_boy_2"/>
+        <include layout="@layout/item_layout_delivery_boy_2"/>
+        <include layout="@layout/item_layout_delivery_boy_2"/>
+        <include layout="@layout/item_layout_delivery_boy_2"/>
+        <include layout="@layout/item_layout_delivery_boy_2"/>-->
+
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_addDeliveryBoy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_add_24"
+        app:fabSize="normal"
+        app:borderWidth="0dp"
+        app:tint="@android:color/white"
+        android:backgroundTint="@color/colorprimary"
+        android:elevation="0dp"
+        style="@style/Theme.MaterialComponents.Light"
+        />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ae.okhaz.boss.view.activities.AdminDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorprimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_menu_adminDetail"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text=""
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+        <ImageView
+            android:id="@+id/img_noti_adminDetail"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_bell"
+            app:tint="@color/white"
+            android:visibility="gone"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/cover"
+                    />
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/white_rounded_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_edit"
+                        android:layout_marginRight="4dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:text="Edit"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    app:civ_border_width="1dp"
+                    android:layout_marginTop="104dp"
+                    app:civ_border_color="@color/black"
+                    android:src="@drawable/toy_face"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_camera"
+                    android:layout_alignParentBottom="true"
+                    />
+                </RelativeLayout>
+            </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_user"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_fullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fullName"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_full_name_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fullName"
+                        android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_mail"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_email_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_phone"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contact_no"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_contact_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/contact_no"
+                       android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_calender"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_dob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dob"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_dob_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/dob"
+                        android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_address"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/address"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_address_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_search"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_landmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/landmark"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_landmark_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:hint="@string/landmark"
+                       android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_locxation"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Place"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_place_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Place"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_locxation"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_pincode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Pincode"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_pincode_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Pincode"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColorHint="@color/black"
+                        android:textSize="14sp"
+                        android:background="@color/card_bg"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_country"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Country"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_country_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Country"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_gender"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Gender"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_gender_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Gender"
+                        android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_icon_feather_users"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_marital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/marital_status"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_marital_status_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/marital_status"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_blood_group"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_bloodgrp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/blood_group"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_blood_group_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/blood_group"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_icon_feather_info"
+                    app:tint="@color/colorprimary"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_document"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_licence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/license_number"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_license_number_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/license_number"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColorHint="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_upload"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_licencePhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/upload_license_photo"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <TextView
+                        android:id="@+id/txt_licencePhoto2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/upload_license_photo"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_lock_24"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    app:tint="@color/light_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/password"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_pass_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card_bg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_lock_24"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="18dp"
+                    app:tint="@color/light_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/confirm_password"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        />
+
+                    <View
+                        android:layout_width="130dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/green"/>
+
+                    <EditText
+                        android:id="@+id/edt_conpass_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black"
+                        android:background="@color/card_bg"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:id="@+id/btn_submit"
+            android:textSize="17sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:text="Submit"
+            android:layout_marginBottom="15dp"
+            />
+    </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

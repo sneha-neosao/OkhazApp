@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/co_landing"
+    android:background="@color/green_1">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_landingFrag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!--ll-main-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <!--logo and search-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_menu"
+                    android:layout_weight="1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/okhaz_menu"
+                    android:scaleType="fitStart"
+                    />
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/qtp_branding_1"
+                    android:layout_gravity="center"
+                    />
+
+                <ImageView
+                    android:id="@+id/search_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/ic_bell"
+                    app:tint="@color/black" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="140dp"
+                android:layout_height="126dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/landing_page_logo"/>
+
+            <include
+                layout="@layout/item_layout_menu_service"/>
+
+           <!-- <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:visibility="visible"
+                android:background="@drawable/slides"/>-->
+
+            <!--1st row services-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_dashboard_landing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_weight="4"
+                    android:background="@color/white"
+                    android:layout_gravity="center">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/dash"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="Dashboard"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:textColor="@color/colorprimary"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_order_landing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="6"
+                    android:background="@color/white"
+                    android:layout_gravity="center">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:src="@drawable/cart_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Orders"
+                            android:textSize="10sp"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:textColor="@color/colorprimary"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--2nd row services-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_supplier_list_landing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_weight="6"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    >
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_supplier_list"
+                            android:layout_gravity="center"
+
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Supplier List"
+                            android:textSize="10sp"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:textColor="@color/colorprimary"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_supplier_product_list_landing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_weight="6"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    >
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/flat"
+                            android:layout_gravity="center"
+
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Product List"
+                            android:textSize="10sp"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:textColor="@color/colorprimary"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_delivery_boy_landing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_weight="4"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/white"
+                    android:layout_gravity="center">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/delivery_boy_icon"
+                            android:layout_gravity="center"
+                            />
+                        <TextView
+                            android:layout_marginTop="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/montserrat_semi_bold"
+                            android:text="Delivery Boy"
+                            android:textColor="@color/colorprimary"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--3rd row services-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_product_list_landing"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                app:cardCornerRadius="12dp"
+                android:layout_weight="7"
+                android:clickable="true"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:visibility="visible"
+                >
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/flat"
+                        android:layout_gravity="center"
+
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:gravity="end"
+                        android:text="Product List"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:textColor="@color/colorprimary"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bell"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_item_faq"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_faq_bottom"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-90dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/bottom_layout_faq"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_gravity="bottom"
+
+            android:layout_width="match_parent"
+            />
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

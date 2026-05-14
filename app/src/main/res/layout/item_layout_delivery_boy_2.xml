@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_delivery_boy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:background="?attr/selectableItemBackground"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:orientation="horizontal"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/half_circle_bg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_deliveryBoy_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="John Taylor"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/icn" />
+
+                        <TextView
+                            android:id="@+id/txt_deli_orderCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="0 Order"
+                            android:textColor="#000000"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/icn" />
+
+                        <TextView
+                            android:id="@+id/price_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="4.0"
+                            android:textColor="#000000"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+              >
+
+                <ImageView
+                    android:id="@+id/iv_delivery_boy_active"
+                    android:layout_width="wrap_content"
+                    android:layout_height="75dp"
+                    android:layout_gravity="bottom|end"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone"
+                    android:rotation="0.6"
+                    android:src="@drawable/delivery_boy_status_2" />
+                <ImageView
+                    android:id="@+id/iv_delivery_boy_inactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="75dp"
+                    android:layout_gravity="bottom|end"
+                    android:scaleType="fitEnd"
+                    android:rotation="0.6"
+                    android:visibility="gone"
+                    android:src="@drawable/delivery_boy_status"
+                    app:tint="@color/red" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="6dp">
+
+                    <TextView
+                        android:id="@+id/tv_delivery_boy_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center"
+                        android:text="Active"
+                        android:textColor="@color/white"
+                        android:textSize="6sp" />
+
+                </LinearLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/delivery_boy_img"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:src="@drawable/toy_face"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp" />
+    </LinearLayout>
+
+</RelativeLayout>

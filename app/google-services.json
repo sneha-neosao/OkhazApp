@@ -1,0 +1,154 @@
+{
+  "project_info": {
+    "project_number": "16882638738",
+    "project_id": "qtpmart",
+    "storage_bucket": "qtpmart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16882638738:android:bee80559e6bd6149dc6b4b",
+        "android_client_info": {
+          "package_name": "ae.okhaz.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16882638738-3c8mt36oq72c75mf88bnsi69vodll9rn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6WI_OxTUti8GIUotMCQwvZXOamhxZMXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16882638738-3c8mt36oq72c75mf88bnsi69vodll9rn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "16882638738-77685a7uar7940prbdpt3f36o667itns.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.grocery.QTPmart"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16882638738:android:6c8a8ec401e86ad7dc6b4b",
+        "android_client_info": {
+          "package_name": "ae.okhaz.boss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16882638738-3c8mt36oq72c75mf88bnsi69vodll9rn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6WI_OxTUti8GIUotMCQwvZXOamhxZMXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16882638738-3c8mt36oq72c75mf88bnsi69vodll9rn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "16882638738-77685a7uar7940prbdpt3f36o667itns.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.grocery.QTPmart"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16882638738:android:06f6edb4df81c8eddc6b4b",
+        "android_client_info": {
+          "package_name": "com.grocery.QTPmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16882638738-3c8mt36oq72c75mf88bnsi69vodll9rn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6WI_OxTUti8GIUotMCQwvZXOamhxZMXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16882638738-3c8mt36oq72c75mf88bnsi69vodll9rn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "16882638738-77685a7uar7940prbdpt3f36o667itns.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.grocery.QTPmart"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16882638738:android:9b477a10269d561bdc6b4b",
+        "android_client_info": {
+          "package_name": "com.grocery.deliveryman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16882638738-3c8mt36oq72c75mf88bnsi69vodll9rn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6WI_OxTUti8GIUotMCQwvZXOamhxZMXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16882638738-3c8mt36oq72c75mf88bnsi69vodll9rn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "16882638738-77685a7uar7940prbdpt3f36o667itns.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.grocery.QTPmart"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

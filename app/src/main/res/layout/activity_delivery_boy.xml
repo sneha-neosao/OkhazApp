@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context="ae.okhaz.boss.Activitys.Supplier.DeliveryBoyActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_deliveryBoy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Theme.Delievrys.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+                    app:popupTheme="@style/Theme.Delievrys.PopupOverlay" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="100dp"
+                    android:src="@drawable/profiles_img"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    app:srcCompat="@mipmap/ic_launcher_round" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_deliBoyStatus"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:boxStrokeWidth="1dp"
+                android:hint="Delivery Boy Status"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/text_color"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_deliveryBoy_userStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15sp"
+                    android:singleLine="true"
+                    android:editable="false"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:textColorHint="@color/text_color"
+                    style="@style/Edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:boxStrokeWidth="1dp"
+                android:hint="First Name"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/text_color"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+               >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_deliveryBoy_userFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15sp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_color"
+                    style="@style/Edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:boxStrokeWidth="1dp"
+                android:hint="User Name"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/text_color"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+               >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_deliveryBoy_userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15sp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_color"
+                    style="@style/Edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_gender"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:boxStrokeWidth="1dp"
+                android:hint="Gender"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/text_color"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_deliveryBoy_userGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15sp"
+                    android:singleLine="true"
+                    android:editable="false"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:textColorHint="@color/text_color"
+                    style="@style/Edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:boxStrokeWidth="1dp"
+                android:hint="Mobile"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/text_color"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+               >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_deliveryBoy_userMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15sp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textColorHint="@color/text_color"
+                    style="@style/Edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:boxStrokeWidth="1dp"
+                android:hint="Email Id"
+                app:boxStrokeColor="@color/black"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_deliveryBoy_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15sp"
+                    android:singleLine="true"
+                    android:inputType="textEmailAddress"
+                    style="@style/Edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_vehicle_type"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:boxStrokeWidth="1dp"
+                android:hint="Vehicle Type"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/text_color"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_deliveryBoy_userVehicle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:editable="false"
+                    android:paddingLeft="15sp"
+                    android:singleLine="true"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:textColorHint="@color/text_color"
+                    style="@style/Edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:boxStrokeWidth="1dp"
+                android:hint="Vehicle Number"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/text_color"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_deliveryBoy_userVehiNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15sp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_color"
+                    style="@style/Edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:boxStrokeWidth="1dp"
+                android:hint="Address"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/text_color"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_deliveryBoy_userAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:maxHeight="125dp"
+                    android:paddingLeft="15sp"
+                    android:textColorHint="@color/text_color"
+                    style="@style/Edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeColor="@color/black"
+                android:hint="Password"
+                app:passwordToggleEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_deliveryBoy_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15sp"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    style="@style/Edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                app:boxStrokeWidth="1dp"
+                android:hint="Confirm Password"
+                app:hintTextColor="@color/text_color"
+                app:boxStrokeColor="@color/black"
+                app:passwordToggleEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_deliveryBoy_confirmPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingLeft="15sp"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    style="@style/Edittext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_add_deliveryBoy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:backgroundTint="@color/colorprimary"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_update_deliveryBoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    android:backgroundTint="@color/colorprimary"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    />
+
+                <Button
+                    android:id="@+id/btn_delete_deliveryBoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:visibility="gone"
+                    android:backgroundTint="@color/red_btn_bg_color"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+            <fragment
+                android:id="@+id/mapview"
+                android:name="ae.okhaz.boss.Utils.MySupportFragment"
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                map:liteMode="true"
+                />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

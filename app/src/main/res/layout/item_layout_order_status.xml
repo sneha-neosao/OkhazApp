@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardElevation="5sp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:weightSum="10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                            <TextView
+                                android:background="@drawable/round_shape"
+                                android:layout_width="28dp"
+                                android:layout_height="24dp"
+                                android:id="@+id/txt_count"
+                                android:textColor="@color/white"
+                                android:text="78"
+                                android:visibility="gone"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_weight="2"
+                                />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/order_no_tv"
+                android:maxLines="2"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:text="Pending Orders"
+                android:textColor="@color/text_color"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp" />
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pending_cv"
+                android:id="@+id/order_pending_img"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

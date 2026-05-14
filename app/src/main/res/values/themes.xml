@@ -1,0 +1,118 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Delievrys" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorprimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red</item>
+        <item name="colorSecondaryVariant">@color/red</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!--Button-->
+    <style name="ButtonDark" parent="TextAppearance.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:background">@drawable/shape_bg_darkbutton</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="Theme.Delievrys.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Delievrys.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Delievrys.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    
+    
+    <style name="Edittext" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingStart" tools:ignore="NewApi">15sp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/open_sans_semibold</item>
+        <item name="singleLine">true</item>
+        <item name="hintTextColor">@color/text_color</item>
+
+
+    </style>
+
+    <style name="SHowText" parent="TextAppearance.Design.Tab">
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="filters" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/square_outline</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingStart" tools:ignore="NewApi">50dp</item>
+        <item name="android:drawablePadding" tools:ignore="NewApi">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Profiles" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingStart" tools:ignore="NewApi">20dp</item>
+        <item name="android:drawablePadding" tools:ignore="NewApi">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="Order_details_txt" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/open_sans</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingStart" tools:ignore="NewApi">10sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="price_details_txt" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/open_sans_semibold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingEnd" tools:ignore="NewApi">10sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="textInputLayoutAppearance" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <!-- reference our hint & error styles -->
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="boxStrokeColor">@color/stroke_color</item>
+    </style>
+
+    <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/transparent_color</item>
+    </style>
+
+    <style name="Color1SwitchStyle">
+        <item name="colorControlActivated">@color/colorprimarydark</item>
+    </style>
+
+    <style name="CustomDialog" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/white_trans</item>
+    </style>
+
+</resources>

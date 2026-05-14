@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/close_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_close_24"
+        android:layout_margin="10dp"
+        android:layout_gravity="end"
+        app:tint="@color/black" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/comments_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+
+        app:hintTextColor="@color/tomato"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeColor="@color/black"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/comment_edts"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:hint="Enter your comment"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/open_sans"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_gravity="end"
+        android:id="@+id/add_comment"
+        android:layout_below="@id/comments_til"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:text="SUBMIT COMMENT"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10sp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:layout_alignParentRight="true" />
+
+</LinearLayout>

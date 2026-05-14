@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_order">
+
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="ae.okhaz.boss.Fragments.HomeFragment"
+        android:label="Order Details"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/goto_order_details"
+            app:destination="@id/nav_order_details"/>
+
+        <action
+            android:id="@+id/goto_map"
+            app:destination="@+id/nav_maps"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="ae.okhaz.boss.ui.gallery.GalleryFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="ae.okhaz.boss.ui.slideshow.SlideshowFragment"
+        android:label="Notification"
+        tools:layout="@layout/fragment_slideshow" />
+
+
+    <fragment
+        android:id="@+id/nav_order_details"
+        android:name="ae.okhaz.boss.Fragments.Delivery.DM_OrderDetailsFragment"
+        android:label="Order Details"
+        tools:layout="@layout/dm_fragment_order_details">
+
+        <action
+            android:id="@+id/goto_home"
+            app:destination="@+id/nav_order"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_order_details_admin"
+        android:name="ae.okhaz.boss.Fragments.Admin.AdminOrderDetailFragment"
+        android:label="Order Details"
+        tools:layout="@layout/fragment_admin_order_detail">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_cat_recyclers"
+        android:name="ae.okhaz.boss.Fragments.CategoryRecyclerFragment"
+        tools:layout="@layout/fragment_category_recycler">
+        <action
+            android:id="@+id/goto_order_details"
+            app:destination="@id/nav_order_details"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_cat_admin_recyclers"
+        android:name="ae.okhaz.boss.Fragments.Admin.CategoryAdminFragment"
+        tools:layout="@layout/fragment_category_admin">
+        <action
+            android:id="@+id/goto_order_details_admin"
+            app:destination="@id/nav_order_details_admin"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_maps"
+        android:name="ae.okhaz.boss.Fragments.MapsFragment"
+        android:label="Map"
+        tools:layout="@layout/fragment_maps">
+
+        <action
+            android:id="@+id/goto_orders"
+            app:destination="@+id/nav_order"/>
+    </fragment>
+
+</navigation>

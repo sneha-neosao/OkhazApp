@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="15dp">
+
+
+    <ImageView
+        android:src="@drawable/qtp_branding_1"
+        android:scaleType="centerCrop"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10sp"
+        android:id="@+id/product_iv"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/product_names_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Product name"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textColor="@color/colorprimary"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_medium"
+                android:singleLine="true"
+                android:text="RSP : "
+                android:layout_marginRight="34dp"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/product_prices_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_medium"
+                android:singleLine="true"
+                android:text="AED 120"
+                android:textSize="10sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_medium"
+                android:singleLine="true"
+                android:text="Cost Price : "
+                android:layout_marginRight="4dp"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/cost_prices_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_medium"
+                android:singleLine="true"
+                android:text="AED 120"
+                android:textSize="10sp"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/product_barcode_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="5dp"
+            android:text="78945612"
+            android:textSize="10sp" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/product_suplier_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Sweet Garden General trading llc"
+            android:textSize="10sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|end"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/product_qty_tv"
+            android:background="@color/highlight"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="(QTY 3)"
+            android:gravity="center"
+            android:layout_gravity="end|center"
+            android:textColor="#D21616"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="10sp" />
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_box"
+            android:layout_gravity="center"
+            android:id="@+id/iv_reject_item"/>
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/barcode"
+            android:id="@+id/barcode_iv"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:layout_marginStart="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/barcode"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/btn_add_barcode"
+            android:layout_marginLeft="20dp"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

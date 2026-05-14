@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+       <com.google.android.material.card.MaterialCardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:cardCornerRadius="4dp">
+           
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="170dp">
+
+                   <ImageView
+                       android:id="@+id/img_product"
+                       android:layout_width="match_parent"
+                       android:layout_height="150dp"
+                       android:src="@drawable/noimageavailable"/>
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentBottom="true"
+                       android:layout_alignParentLeft="true"
+                       android:orientation="vertical">
+
+
+                       <com.google.android.material.switchmaterial.SwitchMaterial
+                           android:id="@+id/switch_active"
+                           android:layout_width="wrap_content"
+                           android:layout_height="20dp"
+                           android:layout_gravity="center"
+                           android:theme="@style/Color1SwitchStyle"
+                           />
+
+                       <TextView
+                           android:id="@+id/txt_product_active"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textSize="10sp"
+                           android:layout_gravity="center"
+                           android:gravity="center"
+                           android:text="Active"
+                           android:background="@color/white"
+                           android:layout_marginTop="3dp"
+                           android:textStyle="bold"
+                           android:textColor="@color/black"/>
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentBottom="true"
+                       android:layout_alignParentRight="true"
+                       android:orientation="vertical">
+
+
+                   <com.google.android.material.switchmaterial.SwitchMaterial
+                       android:id="@+id/switch_stock"
+                       android:layout_width="wrap_content"
+                       android:layout_height="20dp"
+                       />
+
+                       <TextView
+                           android:id="@+id/txt_product_stock"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textSize="10sp"
+                           android:layout_gravity="center"
+                           android:gravity="center"
+                           android:textStyle="bold"
+                           android:layout_marginTop="3dp"
+                           android:text="Stock"
+                           android:background="@color/white"
+                           android:textColor="@color/black"/>
+                   </LinearLayout>
+                   
+
+                   
+               </RelativeLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:id="@+id/txt_product_name"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textSize="14sp"
+                       android:text="product name"
+                       android:textColor="@color/black"/>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+                       android:layout_gravity="bottom"
+                       android:gravity="bottom"
+                       android:orientation="horizontal">
+
+                       <TextView
+                           android:id="@+id/txt_product_unit"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="1"
+                           android:textSize="16sp"
+                           android:text="unit"
+                           android:textColor="@color/black"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="16sp"
+                           android:text="AED"
+                           android:textColor="@color/black"/>
+
+                       <TextView
+                           android:id="@+id/txt_product_price1"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="16sp"
+                           android:layout_marginLeft="8dp"
+                           android:text="6"
+                           android:textStyle="bold"
+                           android:textColor="@color/black"/>
+
+                       <TextView
+                           android:id="@+id/txt_product_price2"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="12sp"
+                           android:text=".33"
+                           android:layout_marginRight="5dp"
+                           android:textColor="@color/black"/>
+
+
+                   </LinearLayout>
+
+               </LinearLayout>
+
+
+           </LinearLayout>
+           
+       </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

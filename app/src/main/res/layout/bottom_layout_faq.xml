@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:id="@+id/ll_faq_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:background="@drawable/bottom_sheet_background_faq">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_darkbutton"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We are happy to help you"
+            android:textColor="@color/compito_color"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frequently asked questions"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_faq_bottom"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            />
+        <include layout="@layout/item_layout_faq_bottom"/>
+
+        <ProgressBar
+            android:id="@+id/bottom_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/btn_show_all_bottom"
+            android:layout_width="88dp"
+            android:layout_height="35dp"
+            android:text="Show All"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorprimary"
+            android:background="@drawable/shape_bg_darkbutton"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"/>
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

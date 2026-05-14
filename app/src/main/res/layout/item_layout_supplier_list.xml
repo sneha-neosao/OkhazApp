@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/half_circle_bg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+            <ImageView
+                android:id="@+id/img_supplier"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/noimageavailable"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_supplier_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="John Taylor"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+
+
+                        <TextView
+                            android:id="@+id/txt_supplier_address"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="0 Order"
+                            android:textColor="#000000"
+                            android:textSize="13sp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Open ."
+                            android:visibility="gone"
+                            android:textColor="@color/aqua"
+                            android:textSize="13sp" />
+                        <TextView
+                            android:id="@+id/txt_close_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Closes at 11:00"
+                            android:textColor="@color/black"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_supplierStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Active"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:layout_width="44dp"
+                        android:layout_height="20dp"
+                        android:padding="0dp"
+                        android:id="@+id/switch_supplier"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:textColor="@color/dark_orange"
+                        android:textSize="10sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="min"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:textColor="@color/dark_orange"
+                        android:textSize="10sp"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

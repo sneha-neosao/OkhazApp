@@ -1,0 +1,130 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_gray"
+    tools:context="ae.okhaz.boss.view.fragments.SupplierListFragment">
+
+        <ScrollView
+         android:layout_width="match_parent"
+            android:fillViewport="true"
+         android:layout_height="match_parent">
+
+         <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="30dp"
+           android:background="@drawable/square_outline"
+           android:layout_margin="10dp"
+           android:visibility="gone"
+           android:orientation="vertical">
+
+           <EditText
+               android:id="@+id/edt_search"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="3dp"
+               android:textSize="16sp"
+               android:layout_gravity="center"
+               android:textColor="@color/black"
+               android:hint="Search"
+               android:drawableRight="@drawable/ic_baseline_search_24"
+               android:background="@android:color/transparent"
+               />
+
+       </LinearLayout>
+
+      <!-- <include layout="@layout/item_layout_supplier_list"/>-->
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rv_supplier_list"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:layout_marginBottom="10dp"
+           app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+           />
+       <ProgressBar
+           android:id="@+id/pb_supplier"
+           android:visibility="gone"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           />
+
+             <TextView
+                 android:visibility="gone"
+                 android:layout_centerInParent="true"
+                 android:textSize="17sp"
+                 android:fontFamily="@font/open_sans_semibold"
+                 android:textColor="@color/black"
+                 android:gravity="center"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/no_data_txt"
+                 android:text="No Suppliers..!"
+                 />
+
+   </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/filters_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sort_tv"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:elevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_resource_short"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sort"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat_semi_bold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

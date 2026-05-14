@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipedeck="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/green"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/img_back_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+        <LinearLayout
+            android:id="@+id/pager_dots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:layout_alignBottom="@+id/img_back_"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <!--on below line we are creating a swipe
+         frame layout for providing a swipe action-->
+
+    <!-- <com.google.android.material.button.MaterialButton
+         android:id="@+id/btn_continue"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="continue"
+         android:visibility="gone"
+         android:textColor="@color/black"
+         android:layout_marginLeft="40dp"
+         android:layout_marginRight="40dp"
+         android:layout_marginBottom="40dp"
+         android:layout_alignParentBottom="true"
+         android:backgroundTint="@color/white"
+         />-->
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/swipe_deck"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_above="@id/btn_continue"
+        android:clipToPadding="false"
+        />
+
+    <TextView
+        android:id="@+id/btn_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="Skip"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="40dp"
+        android:drawablePadding="10dp"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

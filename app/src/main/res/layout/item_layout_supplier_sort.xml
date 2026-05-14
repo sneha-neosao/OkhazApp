@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/llShortBottomSheet"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:layout_width="match_parent"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="1dp"
+    android:layout_gravity="bottom"
+    android:background="@color/transparent_color"
+    android:layout_height="wrap_content"
+    style="@style/SheetDialog"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="4dp"
+            android:background="@drawable/shape_bg_darkbutton"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="sort"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center"
+            android:background="@drawable/bottom_sheet_background" />
+
+
+        <RadioGroup
+            android:id="@+id/rgShort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginBottom="3dp">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingStart="10sp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/sort_az"
+                android:paddingLeft="10sp"
+                android:layout_marginLeft="10dp"
+                android:text="a - z"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"/>
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingStart="10sp"
+                android:layout_marginStart="10dp"
+                android:paddingLeft="10sp"
+                android:id="@+id/sort_za"
+                android:layout_marginLeft="10dp"
+                android:text="z - a"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_medium"/>
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

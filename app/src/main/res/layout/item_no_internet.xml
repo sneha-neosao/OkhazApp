@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:outlineSpotShadowColor="@color/greens"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/no_internet_iv"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No internet connection found"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:fontFamily="@font/open_sans_semibold"/>
+
+            <Button
+                android:id="@+id/retry_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retry"
+                android:backgroundTint="@color/greens"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

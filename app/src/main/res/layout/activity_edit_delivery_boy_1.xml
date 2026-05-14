@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ae.okhaz.boss.view.activities.EditDeliveryBoyActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/green"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_back_add_delivery_boy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back"
+                    app:tint="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_toolbar_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Update Delivery Boy"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_noti_adminDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_bell"
+                    app:tint="@color/white"
+                    android:layout_marginEnd="16dp"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@drawable/cover"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/white_rounded_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_add_24"
+                        android:layout_marginEnd="4dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:text="add"/>
+                </LinearLayout>
+
+               <!-- <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        app:civ_border_width="1dp"
+                        android:layout_marginTop="104dp"
+                        app:civ_border_color="@color/black"
+                        android:src="@drawable/toy_face"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_camera"
+                        android:layout_alignParentBottom="true"
+                        />
+                </RelativeLayout>-->
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_image_delivery"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="104dp"
+                        android:src="@drawable/toy_face"
+                        />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_gravity="bottom|end"
+                        android:id="@+id/navigation_cv1"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:elevation="2dp"
+                        android:background="?attr/selectableItemBackground"
+                        app:cardCornerRadius="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="2dp"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_camera" />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_camera"
+                        android:layout_gravity="bottom|end"
+                        />
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <!--Status-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/llStatusEditDeliveryBoy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_country"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="18dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/status"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/green"/>
+
+                            <TextView
+                                android:id="@+id/tvStatusEditDeliveryBoy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--Full Name-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_user"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="18dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fullName"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/green"/>
+
+                            <EditText
+                                android:id="@+id/edt_deliveryBoy_fullName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:cursorVisible="true"
+                                android:focusable="true"
+                                android:text=""
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--user Name-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_user"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="18dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="User Name"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/green"/>
+
+                            <EditText
+                                android:id="@+id/edt_deliveryBoy_userName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:cursorVisible="true"
+                                android:focusable="true"
+                                android:text=""
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--Email-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_mail"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="18dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/email"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/green"/>
+
+                            <EditText
+                                android:id="@+id/edt_deliveryBoy_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:cursorVisible="true"
+                                android:focusable="true"
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!--Contact no-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_phone"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="18dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/contact_no"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/green"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.hbb20.CountryCodePicker
+                                    android:id="@+id/ccp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/card_bg"
+                                    app:ccp_textSize="12sp"
+                                    android:layout_gravity="center"/>
+                                <EditText
+                                    android:id="@+id/edt_deliveryBoy_contact"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:cursorVisible="true"
+                                    android:focusable="true"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!--Vehicle type-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/llVehicleTypeEditDeliveryBoy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_vehicle"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="18dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vehicle_type"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/green"/>
+
+                            <TextView
+                                android:id="@+id/tvVehicleTypeEditDeliveryBoy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--Vehicle  number-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_plate_number"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="18dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vehicle_number"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/green"/>
+
+                            <EditText
+                                android:id="@+id/edt_deliveryBoy_vehicleNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:cursorVisible="true"
+                                android:focusable="true"
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--Address-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_address"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="18dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/address"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/green"/>
+                            <EditText
+                                android:id="@+id/edt_deliveryBoy_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:cursorVisible="true"
+                                android:focusable="true"
+                                android:textColor="@color/black"
+                                android:background="@android:color/transparent"
+                                android:textSize="12sp"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--gender-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_gender"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="18dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Gender"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/green"/>
+                            <EditText
+                                android:id="@+id/edt_deliveryBoy_gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:cursorVisible="false"
+                                android:focusableInTouchMode="false"
+                                android:focusable="false"
+                                android:textColor="@color/black"
+                                android:background="@android:color/transparent"
+                                android:textSize="12sp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!--Password-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_icon_feather_lock"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="18dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/password"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/green"/>
+
+                            <EditText
+                                android:id="@+id/edtPasswordEditDeliveryBoy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:background="@android:color/transparent"
+                                android:cursorVisible="true"
+                                android:focusable="true"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:inputType="textPassword"
+                                />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_show_hide_password_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_icon_feather_eye"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="10dp"
+                            />
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--Confirm password-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_bg"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_icon_feather_lock"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="18dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/confirm_password"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                />
+
+                            <View
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/green"/>
+
+                            <EditText
+                                android:id="@+id/edtConfirmPasswordEditDeliveryBoy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:cursorVisible="true"
+                                android:focusable="true"
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:inputType="textPassword"
+                                />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_show_hide_confirm_password_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_icon_feather_eye"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="10dp"
+                            />
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:textSize="17sp"
+                        android:layout_weight="1"
+                        style="@style/ButtonDark"
+                        android:background="@drawable/shape_bg_darkbutton"
+                        android:textColor="@android:color/white"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:text="Submit"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_delete"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        style="@style/ButtonDark"
+                        android:background="@drawable/shape_bg_darkbutton"
+                        android:textColor="@android:color/white"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:text="Delete"
+                        android:layout_marginLeft="8dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/ll_faq_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_faq"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"
+                    android:text="FAQ List"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <ImageView
+                    android:id="@+id/down_arrow"
+                    android:layout_weight="4"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    />
+
+                <ImageView
+                    android:id="@+id/up_arrow"
+                    android:layout_weight="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:backgroundTint="@color/black"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
+                    android:layout_margin="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/webview_answers"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                />
+
+            <View
+                android:id="@+id/view_faq"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/light_grey"/>
+
+        </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
